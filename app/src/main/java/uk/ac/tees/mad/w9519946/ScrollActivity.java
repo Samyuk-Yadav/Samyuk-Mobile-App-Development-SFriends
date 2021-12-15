@@ -75,7 +75,6 @@ public class ScrollActivity extends AppCompatActivity {
             startActivity(new Intent(this, Start_Activity.class));
         });
 
-
         tictaktoe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
