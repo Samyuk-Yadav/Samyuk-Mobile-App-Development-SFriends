@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">SFriend_App</string>
+
+    <string name="Slides_layout">Write down everything that you want to store and use it to play games and write down the scores</string>
+    <string name="text">Light Mode</string>
+    <string name="start_text">Start</string>
+    <string name="Or_text">or</string>
+
+
+    <string name="first_slide">Play simple Games</string>
+    <string name="second_slide">Truth and Dare</string>
+    <string name="third_slide">Tic Tak Toe</string>
+    <string name="fourth_slide">Write Notes</string>
+    <string name="fifth_slide">Watch Hot News</string>
+    <string name="sixth_slide">Find Location</string>
+
+    <string name="first_slide_desc">Play simple fun games that will refresh your mood Moreover, The best way to kill time!!!</string>
+    <string name="second_slide_desc">Lets play to share Secrets</string>
+    <string name="third_slide_desc">Take turns to win the ancient Egyptians game</string>
+    <string name="four_slide_desc"> Write down the winners list and share few comments on them</string>
+    <string name="fifth_slide_desc"> Watch the latest and trending news</string>
+    <string name="sixth_slide_desc"> Find whats in your surroundings by exploring them</string>
+
+
+    <string name="skip_btn">Skip</string>
+    <string name="skip">Skip Tutorial</string>
+    <string name="nxt_btn">Next</string>
+    <string name="lets_get_started">Why to wait! \n Let\'s get started</string>
+
+
+    // For Game Truth and Dare
+
+    <string name="app_nametd">Truth or Dare</string>
+    <string name="spintd">SPIN BOTTLE</string>
+    <string name="truthtd">Truth</string>
+    <string name="daretd">Dare</string>
+    <string name="action_addtd">Add</string>
+    <string name="action_refreshtd">Refresh</string>
+    <string name="get_postd">Get your position and</string>
+    <string name="add_truthtd">Add Truth</string>
+    <string name="add_daretd">Add Dare</string>
+</resources>

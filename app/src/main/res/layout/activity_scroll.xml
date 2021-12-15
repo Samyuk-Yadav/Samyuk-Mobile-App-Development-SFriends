@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFEB3B"
+    android:fillViewport="true"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="1dp">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/yellow"
+        android:orientation="horizontal"
+        tools:context="FriendApp.ScrollActivity">
+
+        <Button
+            android:id="@+id/maps"
+            android:layout_width="406dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="110dp"
+            android:background="@drawable/bg_switch"
+            android:text="Maps"
+            android:textSize="32sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.511"
+            app:layout_constraintStart_toStartOf="@+id/truth_and_dare"
+            app:layout_constraintTop_toBottomOf="@+id/notes" />
+
+        <Button
+            android:id="@+id/btngames"
+            android:layout_width="409dp"
+            android:layout_height="77dp"
+            android:layout_marginTop="110dp"
+            android:background="@drawable/bg_switch"
+            android:text="Tic - Tak - Toe"
+            android:textSize="32sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButton" />
+
+        <Button
+            android:id="@+id/truth_and_dare"
+            android:layout_width="409dp"
+            android:layout_height="71dp"
+            android:layout_marginTop="110dp"
+            android:background="@drawable/bg_switch"
+            android:text="Truth and Dare"
+            android:textSize="32sp"
+            app:layout_constraintEnd_toEndOf="@+id/btngames"
+            app:layout_constraintStart_toStartOf="@+id/btngames"
+            app:layout_constraintTop_toBottomOf="@+id/btngames" />
+
+        <Button
+            android:id="@+id/notes"
+            android:layout_width="408dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="110dp"
+            android:background="@drawable/bg_switch"
+            android:text="Notes"
+            android:textSize="32sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/truth_and_dare"
+            app:layout_constraintTop_toBottomOf="@+id/truth_and_dare" />
+
+        <TextView
+            android:id="@+id/headingText"
+            android:layout_width="385dp"
+            android:layout_height="81dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_switch"
+            android:backgroundTint="#AB31C3"
+            android:gravity="center"
+            android:text="@string/lets_get_started"
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="@color/purple_500"
+            android:textCursorDrawable="@drawable/bg_switch"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/btngames"
+            app:layout_constraintHorizontal_bias="0.64"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/news"
+            android:layout_width="413dp"
+            android:layout_height="84dp"
+            android:layout_marginTop="110dp"
+            android:background="@drawable/bg_switch"
+            android:text="Breaking News"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/maps"
+            app:layout_constraintStart_toStartOf="@+id/maps"
+            app:layout_constraintTop_toBottomOf="@+id/maps" />
+
+
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switchCompat"
+            android:layout_width="158dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="110dp"
+            android:checked="false"
+            android:padding="10dp"
+            android:text="@string/text"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/news"
+            app:layout_constraintStart_toStartOf="@+id/news"
+            app:layout_constraintTop_toBottomOf="@+id/news" />
+
+        <Button
+            android:id="@+id/logout"
+            android:layout_width="399dp"
+            android:layout_height="78dp"
+            android:layout_marginTop="110dp"
+            android:text="Logout"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/switchCompat"
+            app:layout_constraintStart_toStartOf="@+id/switchCompat"
+            app:layout_constraintTop_toBottomOf="@+id/switchCompat" />
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="260dp"
+            android:layout_height="225dp"
+            android:layout_marginTop="80dp"
+            app:layout_constraintEnd_toEndOf="@+id/headingText"
+            app:layout_constraintHorizontal_bias="0.466"
+            app:layout_constraintStart_toStartOf="@+id/headingText"
+            app:layout_constraintTop_toBottomOf="@+id/headingText"
+            app:srcCompat="@drawable/lets_play"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

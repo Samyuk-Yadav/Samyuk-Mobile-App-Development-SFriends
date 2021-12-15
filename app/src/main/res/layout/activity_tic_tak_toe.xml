@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/yellow"
+    tools:context=".Tic_Tak_Toe">
+
+
+
+    <RelativeLayout
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/btn5"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/Pink">
+
+        <ImageView
+            android:id="@+id/btnImage5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </ImageView>
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/btn4"
+        android:layout_toLeftOf="@id/btn5"
+        android:background="@color/Pink">
+
+        <ImageView
+            android:id="@+id/btnImage4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </ImageView>
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/btn6"
+        android:layout_toRightOf="@id/btn5"
+        android:background="@color/Pink">
+
+        <ImageView
+            android:id="@+id/btnImage6"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </ImageView>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="330dp"
+        android:layout_height="10dp"
+        android:layout_above="@+id/btn5"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:background="@color/purple_700">
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="330dp"
+        android:layout_height="10dp"
+        android:layout_below="@+id/btn5"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:background="@color/purple_700">
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="10dp"
+        android:layout_height="350dp"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="-14dp"
+        android:layout_toLeftOf="@+id/btn5"
+        android:background="@color/purple_700">
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="10dp"
+        android:layout_height="350dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="-14dp"
+        android:layout_toRightOf="@+id/btn5"
+        android:background="@color/purple_700">
+
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="320dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/btn8"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:backgroundTint="@color/teal_200"
+        android:fontFamily="@font/amaranth_bold"
+        android:text="Reset score and Play Again!!!"
+        android:textColor="@color/Pink"
+        android:textSize="15sp"
+        android:textStyle="bold">
+
+    </Button>
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/reset"
+        app:srcCompat="@drawable/back" />
+
+
+
+
+    <RelativeLayout
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_below="@id/btn5"
+        android:layout_marginTop="25dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/btn8"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/Pink">
+
+        <ImageView
+            android:id="@+id/btnImage8"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </ImageView>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_below="@id/btn5"
+        android:layout_marginTop="25dp"
+        android:layout_toLeftOf="@+id/btn8"
+        android:layout_centerInParent="true"
+        android:id="@+id/btn7"
+        android:background="@color/Pink">
+
+        <ImageView
+            android:id="@+id/btnImage7"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </ImageView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_below="@id/btn5"
+        android:layout_marginTop="25dp"
+        android:layout_toRightOf="@+id/btn8"
+        android:layout_centerInParent="true"
+        android:id="@+id/btn9"
+        android:background="@color/Pink">
+
+        <ImageView
+            android:id="@+id/btnImage9"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </ImageView>
+    </RelativeLayout>
+
+
+
+
+
+    //Top Text View (SoreBoard)
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tic_tak_toe"
+            android:text="Tic - Tak - Toe"
+            android:textColor="@color/Pink"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/bangers">
+
+        </TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/score"
+            android:text="SCORE BOARD:"
+            android:textColor="@color/Pink"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/amaranth_bold">
+        </TextView>
+
+
+        <TextView
+            android:id="@+id/AlphaX"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Score of Alpha:===> 0"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold">
+
+        </TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Score of Beta:===> 0"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:id="@+id/BetaY">
+
+        </TextView>
+    </LinearLayout>
+
+
+
+    // Spaces 1, 2, 3
+    <RelativeLayout
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/btn2"
+        android:layout_above="@+id/btn5"
+        android:layout_marginBottom="25dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/Pink">
+
+        <ImageView
+            android:id="@+id/btnImage2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </ImageView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/btn1"
+        android:layout_above="@+id/btn5"
+        android:layout_marginBottom="25dp"
+        android:layout_toLeftOf="@id/btn2"
+        android:layout_marginRight="20dp"
+        android:background="@color/Pink">
+
+        <ImageView
+            android:id="@+id/btnImage1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </ImageView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/btn3"
+        android:layout_above="@+id/btn5"
+        android:layout_marginBottom="25dp"
+        android:layout_toRightOf="@id/btn2"
+        android:layout_marginRight="20dp"
+        android:background="@color/Pink">
+
+        <ImageView
+            android:id="@+id/btnImage3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </ImageView>
+    </RelativeLayout>
+
+
+</RelativeLayout>

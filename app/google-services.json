@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "901728587600",
+    "project_id": "sfriend-app",
+    "storage_bucket": "sfriend-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:901728587600:android:c52a40cbc0ac4467dae655",
+        "android_client_info": {
+          "package_name": "uk.ac.tees.mad.w9519946"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "901728587600-581qifivq20u88mit16rc58dmq86rbkf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD63HTq9XU0SHeq4VqHVC1PjFfwDiOoLoQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "901728587600-581qifivq20u88mit16rc58dmq86rbkf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
