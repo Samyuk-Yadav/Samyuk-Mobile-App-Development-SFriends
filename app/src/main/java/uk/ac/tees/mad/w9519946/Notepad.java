@@ -41,7 +41,7 @@ public class Notepad extends AppCompatActivity {
                 if(txt_name.isEmpty()){
                     Toast.makeText(Notepad.this, "No text entered", Toast.LENGTH_SHORT).show();
                 }else {
-                    FirebaseDatabase.getInstance().getReference().child("User Saved Text").child("user").setValue(txt_name);
+                    FirebaseDatabase.getInstance().getReference().child("User Values").child("Name").setValue(txt_name);
                 }
             }
         });
@@ -50,11 +50,14 @@ public class Notepad extends AppCompatActivity {
         ArrayAdapter adapter = new ArrayAdapter<String>(this, R.layout.list_item, list);
         listView.setAdapter(adapter);
 
-        DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("User Values");
         reference.addValueEventListener(new ValueEventListener() {
             @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                for (DataSnapshot snapshot : dataSnapshot.getChildren()){
+                    list.add(snapshot.getValue().toString());
+                }
+                adapter.notifyDataSetChanged();
             }
 
             @Override
@@ -62,6 +65,8 @@ public class Notepad extends AppCompatActivity {
 
             }
         });
+
+
 
 
 
