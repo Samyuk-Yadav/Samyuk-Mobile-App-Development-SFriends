@@ -76,7 +76,6 @@ public class ScrollActivity extends AppCompatActivity {
         });
 
 
-
         tictaktoe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
