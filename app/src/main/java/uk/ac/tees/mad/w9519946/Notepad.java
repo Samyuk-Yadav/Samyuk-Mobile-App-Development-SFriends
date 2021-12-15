@@ -46,7 +46,6 @@ public class Notepad extends AppCompatActivity {
             }
         });
 
-
         ArrayList<String> list = new ArrayList<>();
         ArrayAdapter adapter = new ArrayAdapter<String>(this, R.layout.list_item, list);
         listView.setAdapter(adapter);
