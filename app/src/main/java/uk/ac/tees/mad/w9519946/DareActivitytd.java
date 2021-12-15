@@ -35,6 +35,7 @@ public class DareActivitytd extends AppCompatActivity {
     private RecyclerView.Adapter adapter;
     private RecyclerView.LayoutManager layoutManager;
     SharedPreferences sharedPreferences;
+
     SharedPreferences.Editor editor;
     Gson gson = new Gson();
 
