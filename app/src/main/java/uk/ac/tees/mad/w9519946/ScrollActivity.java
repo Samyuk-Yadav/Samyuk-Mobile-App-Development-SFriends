@@ -20,6 +20,7 @@ public class ScrollActivity extends AppCompatActivity {
     private Button tictaktoe;
     private Button truthanddare;
     private Button notepad;
+    private Button maps;
     SwitchCompat switchCompat;
     SharedPreferences sharedPreferences = null;
 
@@ -31,6 +32,7 @@ public class ScrollActivity extends AppCompatActivity {
 
         tictaktoe= findViewById(R.id.btngames);
         notepad = findViewById(R.id.notes);
+        maps = findViewById(R.id.maps);
         truthanddare = findViewById(R.id.truth_and_dare);
         switchCompat = findViewById(R.id.switchCompat);
 
@@ -95,6 +97,13 @@ public class ScrollActivity extends AppCompatActivity {
             public void onClick(View v) {
                 startActivity(new Intent(ScrollActivity.this, Notepad.class));
 
+            }
+        });
+
+        maps.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ScrollActivity.this, MainActivityGM.class));
             }
         });
 

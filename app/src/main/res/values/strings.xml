@@ -7,6 +7,7 @@
     <string name="Or_text">or</string>
 
 
+
     <string name="first_slide">Play simple Games</string>
     <string name="second_slide">Truth and Dare</string>
     <string name="third_slide">Tic Tak Toe</string>
@@ -39,4 +40,13 @@
     <string name="get_postd">Get your position and</string>
     <string name="add_truthtd">Add Truth</string>
     <string name="add_daretd">Add Dare</string>
+
+
+    //GMaps
+
+    <string name="google_key_map">AIzaSyDpmb3NE61oqs3Wkb0TJQPINrlZDa9Wc64</string>
+    <string name="GetLocation">Get Location</string>
+    <string name="LocationDisplay">Give Latitute and Longitude values, and I will show location, you searching for....</string>
+    <string name="Latitiude">Latitude</string>
+    <string name="Longitude">Longitude</string>
 </resources>

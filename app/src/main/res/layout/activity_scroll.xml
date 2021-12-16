@@ -23,7 +23,7 @@
             android:layout_height="70dp"
             android:layout_marginTop="110dp"
             android:background="@drawable/bg_switch"
-            android:text="Maps"
+            android:text="Play Maps"
             android:textSize="32sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.511"
@@ -87,12 +87,12 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/news"
+            android:id="@+id/covid"
             android:layout_width="413dp"
             android:layout_height="84dp"
             android:layout_marginTop="110dp"
             android:background="@drawable/bg_switch"
-            android:text="Breaking News"
+            android:text="Covid-19 Status"
             android:textSize="32sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@+id/maps"
@@ -110,9 +110,9 @@
             android:padding="10dp"
             android:text="@string/text"
             android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="@+id/news"
-            app:layout_constraintStart_toStartOf="@+id/news"
-            app:layout_constraintTop_toBottomOf="@+id/news" />
+            app:layout_constraintEnd_toEndOf="@+id/covid"
+            app:layout_constraintStart_toStartOf="@+id/covid"
+            app:layout_constraintTop_toBottomOf="@+id/covid" />
 
         <Button
             android:id="@+id/logout"
