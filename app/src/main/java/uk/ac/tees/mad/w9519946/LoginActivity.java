@@ -2,6 +2,7 @@ package uk.ac.tees.mad.w9519946;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -62,6 +63,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 EditText MailReset = new EditText(v.getContext());
                 AlertDialog.Builder passwordResetDialog = new AlertDialog.Builder(v.getContext());
+                MailReset.setBackgroundColor(Color.CYAN);
                 passwordResetDialog.setTitle("Reset Password?");
                 passwordResetDialog.setMessage("Enter your email to receive lint to reset.");
                 passwordResetDialog.setView(MailReset);
