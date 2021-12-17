@@ -49,4 +49,19 @@
     <string name="LocationDisplay">Give Latitute and Longitude values, and I will show location, you searching for....</string>
     <string name="Latitiude">Latitude</string>
     <string name="Longitude">Longitude</string>
+
+
+    //Covid
+    <string name="number">2323236544</string>
+    <string name="active">Active</string>
+    <string name="total">Total</string>
+    <string name="deaths">Deaths</string>
+    <string name="increment_number">+232325</string>
+    <string name="covid_19">Covid-19 Status</string>
+    <string name="country">Country</string>
+    <string name="recovered">Recovered</string>
+    <string name="cases">Cases</string>
+    <string name="country_name">ENGLAND</string>
+    
+
 </resources>
