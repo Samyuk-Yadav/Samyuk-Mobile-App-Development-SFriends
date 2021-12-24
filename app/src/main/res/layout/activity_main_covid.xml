@@ -31,10 +31,10 @@
             android:orientation="horizontal">
 
             <org.eazegraph.lib.charts.PieChart
+                android:id="@+id/chart_pie"
                 android:layout_width="220dp"
                 android:layout_height="180dp"
                 android:padding="8dp"
-                android:id="@+id/chart_pie"
                 app:egLegendTextSize="8sp"
                 app:egUsePieRotation="true"
                 app:egValueTextSize="15sp">
@@ -182,17 +182,17 @@
         </TextView>
 
         <com.hbb20.CountryCodePicker
+            android:id="@+id/countrycodepicker"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:layout_marginLeft="300dp"
             android:layout_marginRight="20dp"
             android:background="@drawable/button_clicked"
-            android:padding="5dp"
-            android:id="@+id/ccp"
+            android:padding="3dp"
             app:ccp_autoDetectCountry="true"
             app:ccp_showFullName="false"
             app:ccp_showPhoneCode="false"
-            app:ccp_textSize="18sp" />
+            app:ccp_textSize="15sp" />
 
 
     </RelativeLayout>
@@ -280,7 +280,7 @@
                             android:layout_marginLeft="5dp"
                             android:layout_weight="1"
                             android:text="@string/increment_number"
-                            android:textColor="@color/Red"
+                            android:textColor="@color/black"
                             android:textSize="10sp"
                             android:textStyle="bold">
 
@@ -436,7 +436,7 @@
                             android:layout_marginLeft="5dp"
                             android:layout_weight="1"
                             android:text="@string/increment_number"
-                            android:textColor="@color/purple_700"
+                            android:textColor="@color/black"
                             android:textSize="10sp"
                             android:textStyle="bold">
 
@@ -576,12 +576,13 @@
                 android:textStyle="bold" />
 
             <Spinner
+                android:id="@+id/spiinner"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_gravity="center"
                 android:layout_marginRight="20dp"
-                android:id="@+id/spiinner"
-                android:background="@drawable/drop_arrow">
+                android:background="@drawable/drop_arrow"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck">
 
             </Spinner>
 

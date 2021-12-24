@@ -29,8 +29,8 @@ public class Slider_Adapter extends PagerAdapter {
             R.drawable.truth_and_dare,
             R.drawable.tic_tak_toe,
             R.drawable.notepad,
-            R.drawable.news,
-            R.drawable.maps
+            R.drawable.maps,
+            R.drawable.covid
     };
 
     int headings[] = {

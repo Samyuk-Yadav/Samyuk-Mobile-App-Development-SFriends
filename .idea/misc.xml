@@ -9,6 +9,7 @@
         <entry key="..\:/Users/aroni/AndroidStudioProjects/SFriend_App/app/src/main/res/drawable/card.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/aroni/AndroidStudioProjects/SFriend_App/app/src/main/res/drawable/country.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/aroni/AndroidStudioProjects/SFriend_App/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1398148148148148" />
+        <entry key="..\:/Users/aroni/AndroidStudioProjects/SFriend_App/app/src/main/res/drawable/news.xml" value="0.14322916666666666" />
         <entry key="..\:/Users/aroni/AndroidStudioProjects/SFriend_App/app/src/main/res/drawable/notepad.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/aroni/AndroidStudioProjects/SFriend_App/app/src/main/res/drawable/relative.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/aroni/AndroidStudioProjects/SFriend_App/app/src/main/res/drawable/relative_bottom.xml" value="0.26614583333333336" />
@@ -17,7 +18,7 @@
         <entry key="..\:/Users/aroni/AndroidStudioProjects/SFriend_App/app/src/main/res/layout/activity_covid_layout_item.xml" value="0.24954710144927536" />
         <entry key="..\:/Users/aroni/AndroidStudioProjects/SFriend_App/app/src/main/res/layout/activity_introduction.xml" value="0.1793478260869565" />
         <entry key="..\:/Users/aroni/AndroidStudioProjects/SFriend_App/app/src/main/res/layout/activity_login.xml" value="0.1793478260869565" />
-        <entry key="..\:/Users/aroni/AndroidStudioProjects/SFriend_App/app/src/main/res/layout/activity_main_covid.xml" value="0.264" />
+        <entry key="..\:/Users/aroni/AndroidStudioProjects/SFriend_App/app/src/main/res/layout/activity_main_covid.xml" value="0.176" />
         <entry key="..\:/Users/aroni/AndroidStudioProjects/SFriend_App/app/src/main/res/layout/activity_main_gm.xml" value="0.2" />
         <entry key="..\:/Users/aroni/AndroidStudioProjects/SFriend_App/app/src/main/res/layout/activity_main_td.xml" value="0.1793478260869565" />
         <entry key="..\:/Users/aroni/AndroidStudioProjects/SFriend_App/app/src/main/res/layout/activity_notepad.xml" value="0.1793478260869565" />

@@ -2,14 +2,14 @@ package uk.ac.tees.mad.w9519946;
 
 public class ModelClass {
 
-    String cases, deaths, todaycases, todaydeaths, totalrecovered, active, recovered, country;
+    String cases, deaths, todaycases, todaydeaths, todayrecovered, active, recovered, country;
 
-    public ModelClass(String cases, String deaths, String todaycases, String todaydeaths, String totalrecovered, String active, String recovered, String country) {
+    public ModelClass(String cases, String deaths, String todaycases, String todaydeaths, String todayrecovered, String active, String recovered, String country) {
         this.cases = cases;
         this.deaths = deaths;
         this.todaycases = todaycases;
         this.todaydeaths = todaydeaths;
-        this.totalrecovered = totalrecovered;
+        this.todayrecovered = todayrecovered;
         this.active = active;
         this.recovered = recovered;
         this.country = country;
@@ -47,12 +47,12 @@ public class ModelClass {
         this.todaydeaths = todaydeaths;
     }
 
-    public String getTotalrecovered() {
-        return totalrecovered;
+    public String getTodayrecovered() {
+        return todayrecovered;
     }
 
-    public void setTotalrecovered(String totalrecovered) {
-        this.totalrecovered = totalrecovered;
+    public void setTodayrecovered(String todayrecovered) {
+        this.todayrecovered = todayrecovered;
     }
 
     public String getActive() {

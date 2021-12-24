@@ -21,6 +21,7 @@ public class ScrollActivity extends AppCompatActivity {
     private Button truthanddare;
     private Button notepad;
     private Button maps;
+    private Button covid;
     SwitchCompat switchCompat;
     SharedPreferences sharedPreferences = null;
 
@@ -34,6 +35,7 @@ public class ScrollActivity extends AppCompatActivity {
         notepad = findViewById(R.id.notes);
         maps = findViewById(R.id.maps);
         truthanddare = findViewById(R.id.truth_and_dare);
+        covid = findViewById(R.id.covid);
         switchCompat = findViewById(R.id.switchCompat);
 
 
@@ -104,6 +106,13 @@ public class ScrollActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(ScrollActivity.this, MainActivityGM.class));
+            }
+        });
+
+        covid.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ScrollActivity.this, MainActivityCovid.class ));
             }
         });
 

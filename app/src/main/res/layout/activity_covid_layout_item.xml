@@ -37,7 +37,7 @@
                 android:textSize="15sp"
                 android:textStyle="bold"
                 android:textColor="@color/black"
-                android:id="@+id/countrycases"
+                android:id="@+id/country_cases"
                 android:paddingRight="11dp">
 
             </TextView>

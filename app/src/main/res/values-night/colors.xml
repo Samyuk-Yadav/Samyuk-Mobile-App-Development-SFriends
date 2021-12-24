@@ -9,15 +9,15 @@
     <color name="Pink">#fc03fc</color>
     <color name="Red">#ff0400</color>
     <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="white">#FF0000</color>
 
-    <color name="colorPrimary">#514949</color>
-    <color name="colorPrimaryDark">#474749</color>
-    <color name="colorAccent">#FFFFFF</color>
+    <color name="colorPrimary">#FFEB3B</color>
+    <color name="colorPrimaryDark">#FF6839</color>
+    <color name="colorAccent">#FF0000</color>
     <color name="textColor">#FF0000</color>
 
-    <color name="mainText">#ffffff</color>
+    <color name="mainText">#FF0000</color>
     <color name="textAlt">#8D8F97</color>
 
-    <color name="mainBackground">#6A6F7E</color>
+    <color name="mainBackground">#A1A2A6</color>
 </resources>
