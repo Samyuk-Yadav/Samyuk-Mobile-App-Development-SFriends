@@ -46,6 +46,7 @@
 
     <string name="google_key_map">AIzaSyDpmb3NE61oqs3Wkb0TJQPINrlZDa9Wc64</string>
     <string name="GetLocation">Get Location</string>
+    <string name="ME">My Location</string>
     <string name="LocationDisplay">Give Latitute and Longitude values, and I will show location, you searching for....</string>
     <string name="Latitiude">Latitude</string>
     <string name="Longitude">Longitude</string>

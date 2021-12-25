@@ -16,7 +16,6 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.google.firebase.database.ChildEventListener;
 
 import java.util.ArrayList;
 
@@ -44,7 +43,6 @@ public class Notepad extends AppCompatActivity {
                 }else {
                     FirebaseDatabase.getInstance().getReference().child("User Values").child("Name").setValue(txt_name);
                 }
-
             }
         });
 
