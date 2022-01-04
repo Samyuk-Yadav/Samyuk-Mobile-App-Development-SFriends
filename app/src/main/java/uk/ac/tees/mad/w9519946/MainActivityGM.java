@@ -49,7 +49,7 @@ public class MainActivityGM extends FragmentActivity implements OnMapReadyCallba
     private TextView textView;
     private EditText editTextLat;
     private EditText editTextLong;
-    private LatLng latLng;
+    private LatLng latLngg;
     private Button my_location;
 
     @Override
@@ -66,10 +66,10 @@ public class MainActivityGM extends FragmentActivity implements OnMapReadyCallba
         ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.INTERNET}, PackageManager.PERMISSION_GRANTED);
 
 
-        textView = findViewById(R.id.textView);
-        editTextLat = findViewById(R.id.editTextLat);
-        editTextLong = findViewById(R.id.editTextLong);
-        my_location = findViewById(R.id.location_button);
+        textView = findViewById(R.id.textVu);
+        editTextLat = findViewById(R.id.editLat);
+        editTextLong = findViewById(R.id.editLong);
+        my_location = findViewById(R.id.location_button1);
 
         my_location.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -79,7 +79,7 @@ public class MainActivityGM extends FragmentActivity implements OnMapReadyCallba
         });
 
 
-        latLng = new LatLng(-34, 151);
+        latLngg = new LatLng(-34, 151);
     }
 
     @Override
@@ -94,9 +94,9 @@ public class MainActivityGM extends FragmentActivity implements OnMapReadyCallba
             @Override
             public void onLocationChanged(@NonNull Location location) {
                 try {
-                    latLng = new LatLng(location.getLatitude(), location.getLongitude());
-                    nMap.addMarker(new MarkerOptions().position(latLng).title("Google headquarters"));
-                    nMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
+                    latLngg = new LatLng(location.getLatitude(), location.getLongitude());
+                    nMap.addMarker(new MarkerOptions().position(latLngg).title("Google headquarters"));
+                    nMap.moveCamera(CameraUpdateFactory.newLatLng(latLngg));
 
                     String phoneNumber = "9999777722";
                     String myLatitude = String.valueOf(location.getLatitude());
@@ -132,14 +132,14 @@ public class MainActivityGM extends FragmentActivity implements OnMapReadyCallba
         }
     }
     public void getLocationDetails(View view) {
-        double latitude = latLng.latitude;
-        double longitude = latLng.longitude;
+        double latitude = latLngg.latitude;
+        double longitude = latLngg.longitude;
 
         if(!(editTextLong.getText().toString().isEmpty() || editTextLat.getText().toString().isEmpty()))
         {
             latitude = Double.parseDouble(editTextLat.getText().toString());
             longitude = Double.parseDouble(editTextLong.getText().toString());
-            latLng = new LatLng(latitude, longitude);
+            latLngg = new LatLng(latitude, longitude);
 
         }
         Geocoder geocoder;
@@ -163,8 +163,8 @@ public class MainActivityGM extends FragmentActivity implements OnMapReadyCallba
         } catch (IOException e) {
             e.printStackTrace();
         }
-        nMap.addMarker(new MarkerOptions().position(latLng).title("Marker in : " + address + "/n" + city + state + country + postalCode + knonName));
-        nMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
+        nMap.addMarker(new MarkerOptions().position(latLngg).title("Marker in : " + address + "/n" + city + state + country + postalCode + knonName));
+        nMap.moveCamera(CameraUpdateFactory.newLatLng(latLngg));
         textView.setText(address + city + state + country + postalCode + knonName);
 
     }

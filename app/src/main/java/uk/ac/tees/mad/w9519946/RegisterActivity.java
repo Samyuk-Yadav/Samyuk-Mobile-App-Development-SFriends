@@ -19,12 +19,13 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class RegisterActivity extends AppCompatActivity {
 
-    private EditText email;
-    private EditText password;
-    private Button register;
-    private TextView clickMe;
+    private FirebaseAuth authentication;
 
-    private FirebaseAuth auth;
+    private EditText email_r;
+    private TextView clickMe_r;
+
+    private EditText password_r;
+    private Button register_r;
 
 
     @Override
@@ -32,19 +33,22 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        email = findViewById(R.id.Email);
-        clickMe = findViewById(R.id.clickMe);
-        password = findViewById(R.id.Password);
-        register = findViewById(R.id.register);
+        email_r = findViewById(R.id.Email_r);
 
-        auth = FirebaseAuth.getInstance();
+        authentication = FirebaseAuth.getInstance();
 
 
-        register.setOnClickListener(new View.OnClickListener() {
+        register_r = findViewById(R.id.register);
+
+        password_r = findViewById(R.id.Password_r);
+
+
+
+        register_r.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String txt_email = email.getText().toString();
-                String txt_password = password.getText().toString();
+                String txt_email = email_r.getText().toString();
+                String txt_password = password_r.getText().toString();
 
                 if (TextUtils.isEmpty(txt_email)|| TextUtils.isEmpty(txt_password)){
                     Toast.makeText(RegisterActivity.this, "Empty credentials!", Toast.LENGTH_SHORT).show();
@@ -56,7 +60,9 @@ public class RegisterActivity extends AppCompatActivity {
             }
         });
 
-        clickMe.setOnClickListener(new View.OnClickListener() {
+        clickMe_r = findViewById(R.id.clickMe_r);
+
+        clickMe_r.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
@@ -68,7 +74,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     private void RegisterUser(String email, String password) {
 
-        auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(RegisterActivity.this, new OnCompleteListener<AuthResult>() {
+        authentication.createUserWithEmailAndPassword(email, password).addOnCompleteListener(RegisterActivity.this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){

@@ -61,8 +61,8 @@ public class AdapterCovid extends RecyclerView.Adapter<AdapterCovid.ViewHolder> 
         TextView cases, country;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            country  = itemView.findViewById(R.id.country_name);
-            cases =  itemView.findViewById(R.id.country_cases);
+            country  = itemView.findViewById(R.id.country_name_);
+            cases =  itemView.findViewById(R.id.country_cases_);
         }
     }
 

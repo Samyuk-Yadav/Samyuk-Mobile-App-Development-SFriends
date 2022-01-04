@@ -26,8 +26,8 @@ public class Introduction extends AppCompatActivity {
     Slider_Adapter slider_adapter;
     Button start;
 
-    TextView[] dots;
-    Animation animation;
+    TextView[] dots1;
+    Animation animation2;
 
 
     @Override
@@ -61,19 +61,19 @@ public class Introduction extends AppCompatActivity {
     private void addDots(int position){
 
         dotsLayout.removeAllViews();
-        dots = new TextView[6];
+        dots1 = new TextView[6];
 
-        for (int i=0; i<dots.length; i++){
-            dots[i] = new TextView(this);
-            dots[i].setText(Html.fromHtml("&#8226;"));
-            dots[i].setTextSize(35);
+        for (int i=0; i<dots1.length; i++){
+            dots1[i] = new TextView(this);
+            dots1[i].setText(Html.fromHtml("&#8226;"));
+            dots1[i].setTextSize(35);
 
-            dotsLayout.addView(dots[i]);
+            dotsLayout.addView(dots1[i]);
 
         }
 
-        if(dots.length>0){
-            dots[position].setTextColor(getResources().getColor(R.color.colorPrimaryDark));
+        if(dots1.length>0){
+            dots1[position].setTextColor(getResources().getColor(R.color.colorPrimaryDark));
         }
 
 
@@ -100,8 +100,8 @@ public class Introduction extends AppCompatActivity {
             } else if (position == 4) {
                 start.setVisibility(View.INVISIBLE);
             } else {
-                animation = AnimationUtils.loadAnimation(Introduction.this, R.anim.bottom_animations);
-                start.setAnimation(animation); start.setVisibility(View.VISIBLE);
+                animation2 = AnimationUtils.loadAnimation(Introduction.this, R.anim.bottom_animations);
+                start.setAnimation(animation2); start.setVisibility(View.VISIBLE);
             }
         }
 

@@ -16,8 +16,8 @@ import java.util.Random;
 
 public class MainActivitytd extends AppCompatActivity {
 
-    private Button btn, truthBtn, dareBtn;
-    private ImageView imgView;
+    private Button btn1, truthBtn1, dareBtn1;
+    private ImageView imgView1;
     private Random random = new Random();
     private int lastDirection;
     private MediaPlayer mp;
@@ -27,19 +27,19 @@ public class MainActivitytd extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_td);
 
-        btn = findViewById(R.id.button);
-        truthBtn = findViewById(R.id.btn1);
-        dareBtn = findViewById(R.id.btn2);
-        imgView = findViewById(R.id.imageView);
+        btn1 = findViewById(R.id.button1);
+        truthBtn1 = findViewById(R.id.btn1);
+        imgView1 = findViewById(R.id.imageView1);
+        dareBtn1 = findViewById(R.id.btn2);
 
-        truthBtn.setOnClickListener(new View.OnClickListener() {
+        truthBtn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getApplicationContext(), TruthActivitytd.class));
             }
         });
 
-        dareBtn.setOnClickListener(new View.OnClickListener() {
+        dareBtn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getApplicationContext(), DareActivitytd.class));
@@ -50,15 +50,15 @@ public class MainActivitytd extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        truthBtn.setEnabled(false);
-        dareBtn.setEnabled(false);
-        btn.setEnabled(true);
+        btn1.setEnabled(true);
+        truthBtn1.setEnabled(false);
+        dareBtn1.setEnabled(false);
     }
 
     public void spin(View view) {
         int newDirection = random.nextInt(5400);
-        float pivotX = imgView.getWidth()/2;
-        float pivotY = imgView.getHeight()/2;
+        float pivotX = imgView1.getWidth()/2;
+        float pivotY = imgView1.getHeight()/2;
 
         Animation rotate = new RotateAnimation(lastDirection, newDirection, pivotX, pivotY);
         rotate.setDuration(2000);
@@ -68,7 +68,7 @@ public class MainActivitytd extends AppCompatActivity {
             public void onAnimationStart(Animation animation) {
                 mp = MediaPlayer.create(MainActivitytd.this, R.raw.audio);
                 mp.start();
-                btn.setEnabled(false);
+                btn1.setEnabled(false);
             }
 
             @Override
@@ -76,8 +76,8 @@ public class MainActivitytd extends AppCompatActivity {
                 mp.stop();
                 mp.release();
                 mp = null;
-                truthBtn.setEnabled(true);
-                dareBtn.setEnabled(true);
+                truthBtn1.setEnabled(true);
+                dareBtn1.setEnabled(true);
             }
 
             @Override
@@ -85,6 +85,6 @@ public class MainActivitytd extends AppCompatActivity {
             }
         });
         lastDirection = newDirection;
-        imgView.startAnimation(rotate);
+        imgView1.startAnimation(rotate);
     }
 }

@@ -63,7 +63,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 EditText MailReset = new EditText(v.getContext());
                 AlertDialog.Builder passwordResetDialog = new AlertDialog.Builder(v.getContext());
-                MailReset.setBackgroundColor(Color.CYAN);
+                MailReset.setBackgroundColor(Color.MAGENTA);
                 passwordResetDialog.setTitle("Reset Password?");
                 passwordResetDialog.setMessage("Enter your email to receive lint to reset.");
                 passwordResetDialog.setView(MailReset);

@@ -26,7 +26,7 @@
                 android:paddingLeft="9dp"
                 android:textColor="@color/black"
                 android:textSize="15sp"
-                android:id="@+id/country_name"
+                android:id="@+id/country_name_"
                 android:layout_weight="1">
 
             </TextView>
@@ -37,7 +37,7 @@
                 android:textSize="15sp"
                 android:textStyle="bold"
                 android:textColor="@color/black"
-                android:id="@+id/country_cases"
+                android:id="@+id/country_cases_"
                 android:paddingRight="11dp">
 
             </TextView>

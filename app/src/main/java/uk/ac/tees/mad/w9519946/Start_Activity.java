@@ -21,16 +21,18 @@ public class Start_Activity extends AppCompatActivity {
         Log.d("StarActivity", "onCreate");
         setContentView(R.layout.activity_start);
 
-        register = findViewById(R.id.register);
-        login = findViewById(R.id.login);
 
-        register.setOnClickListener(v -> {
-            startActivity(new Intent(Start_Activity.this, RegisterActivity.class));
-            finish();
-        });
+        login = findViewById(R.id.login);
 
         login.setOnClickListener(v -> {
             startActivity(new Intent(Start_Activity.this, LoginActivity.class));
+            finish();
+        });
+
+        register = findViewById(R.id.register);
+
+        register.setOnClickListener(v -> {
+            startActivity(new Intent(Start_Activity.this, RegisterActivity.class));
             finish();
         });
 

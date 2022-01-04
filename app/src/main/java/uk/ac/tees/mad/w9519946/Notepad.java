@@ -21,23 +21,23 @@ import java.util.ArrayList;
 
 public class Notepad extends AppCompatActivity {
 
-    private EditText edit;
-    private Button add;
-    private ListView listView;
+    private EditText edit_N;
+    private Button add_N;
+    private ListView listView_N;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notepad);
 
-        edit = findViewById(R.id.edit);
-        listView = findViewById(R.id.listView);
-        add = findViewById(R.id.add);
+        listView_N = findViewById(R.id.listView_bottom);
+        add_N = findViewById(R.id.add_N);
+        edit_N = findViewById(R.id.editText_search);
 
-        add.setOnClickListener(new View.OnClickListener() {
+        add_N.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String txt_name = edit.getText().toString();
+                String txt_name = edit_N.getText().toString();
                 if(txt_name.isEmpty()){
                     Toast.makeText(Notepad.this, "No text entered", Toast.LENGTH_SHORT).show();
                 }else {
@@ -48,7 +48,7 @@ public class Notepad extends AppCompatActivity {
 
         ArrayList<String> list = new ArrayList<>();
         ArrayAdapter adapter = new ArrayAdapter<String>(this, R.layout.list_item, list);
-        listView.setAdapter(adapter);
+        listView_N.setAdapter(adapter);
 
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("User Values");
         reference.addValueEventListener(new ValueEventListener() {

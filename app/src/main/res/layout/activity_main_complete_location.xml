@@ -26,7 +26,7 @@
     </Button>
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/text4View4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
@@ -37,14 +37,14 @@
         android:text="Latitude"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textView6"
+        app:layout_constraintBottom_toTopOf="@+id/text6View6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/text5View5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
@@ -52,14 +52,14 @@
         android:text="Country Name"
         android:textSize="12sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textView7"
+        app:layout_constraintBottom_toTopOf="@+id/text7View7"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.283"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintTop_toBottomOf="@+id/text6View6" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/text6View6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
@@ -67,14 +67,14 @@
         android:text="Longitude"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textView5"
-        app:layout_constraintEnd_toEndOf="@+id/textView4"
+        app:layout_constraintBottom_toTopOf="@+id/text5View5"
+        app:layout_constraintEnd_toEndOf="@+id/text4View4"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textView4"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintStart_toStartOf="@+id/text4View4"
+        app:layout_constraintTop_toBottomOf="@+id/text4View4" />
 
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/text7View7"
         android:layout_width="103dp"
         android:layout_height="45dp"
         android:layout_marginTop="35dp"
@@ -82,15 +82,15 @@
         android:text="Locality"
         android:textSize="12sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textView8"
-        app:layout_constraintEnd_toEndOf="@+id/textView5"
+        app:layout_constraintBottom_toTopOf="@+id/text8View8"
+        app:layout_constraintEnd_toEndOf="@+id/text5View5"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textView5"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintStart_toStartOf="@+id/text5View5"
+        app:layout_constraintTop_toBottomOf="@+id/text5View5"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/text8View8"
         android:layout_width="108dp"
         android:layout_height="62dp"
         android:layout_marginStart="102dp"
@@ -104,7 +104,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+        app:layout_constraintTop_toBottomOf="@+id/text7View7" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

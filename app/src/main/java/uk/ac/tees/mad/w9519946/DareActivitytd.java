@@ -30,14 +30,16 @@ public class DareActivitytd extends AppCompatActivity {
 
     private ArrayList<TruthItem> truthList;
 
-    private Toolbar toolbar;
-    private RecyclerView recyclerView;
-    private RecyclerView.Adapter adapter;
-    private RecyclerView.LayoutManager layoutManager;
-    SharedPreferences sharedPreferences;
+    private RecyclerView recyclerView1;
+
 
     SharedPreferences.Editor editor;
     Gson gson = new Gson();
+    private Toolbar toolbar;
+    private RecyclerView.Adapter adapter1;
+    SharedPreferences sharedPreferences;
+    private RecyclerView.LayoutManager layoutManager;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,16 +74,16 @@ public class DareActivitytd extends AppCompatActivity {
 
     public void recyclerViewConfig() {
         // config for RV
-        recyclerView = findViewById(R.id.recyclerView);
+        recyclerView1 = findViewById(R.id.recyclerView);
 
         //performance
-        recyclerView.setHasFixedSize(true);
+        recyclerView1.setHasFixedSize(true);
 
         layoutManager = new LinearLayoutManager(this);
-        adapter = new TruthAdapter(truthList);
+        adapter1 = new TruthAdapter(truthList);
 
-        recyclerView.setLayoutManager(layoutManager);
-        recyclerView.setAdapter(adapter);
+        recyclerView1.setLayoutManager(layoutManager);
+        recyclerView1.setAdapter(adapter1);
     }
 
     public void showDialog() {
@@ -104,7 +106,7 @@ public class DareActivitytd extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Empty Text", Toast.LENGTH_LONG).show();
                 else{
                     updateUserData(mText);
-                    adapter.notifyDataSetChanged();
+                    adapter1.notifyDataSetChanged();
                     Toast.makeText(getApplicationContext(), "Successfully Added", Toast.LENGTH_SHORT).show();
                 }
                 dialog.dismiss();

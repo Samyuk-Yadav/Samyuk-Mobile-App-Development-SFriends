@@ -19,8 +19,9 @@ public class Splashscreen extends AppCompatActivity {
 
     Animation topAnim , sideAnim, bottomAnim;
     ImageView image;
+    TextView slogan;
     SharedPreferences preferenceshared;
-    TextView logo, slogan;
+    TextView logo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,12 +35,12 @@ public class Splashscreen extends AppCompatActivity {
         sideAnim = AnimationUtils.loadAnimation(this, R.anim.side_animations);
         bottomAnim = AnimationUtils.loadAnimation(this, R.anim.bottom_animations);
 
-        image = findViewById(R.id.image);
-        logo = findViewById(R.id.textView);
-        slogan = findViewById(R.id.textView2);
+        slogan = findViewById(R.id.textView2_front);
+        image = findViewById(R.id.image_logo);
+        logo = findViewById(R.id.textView_front);
 
-        image.setAnimation(topAnim);
         logo.setAnimation(sideAnim);
+        image.setAnimation(topAnim);
         slogan.setAnimation(bottomAnim);
 
         new Handler().postDelayed(new Runnable() {

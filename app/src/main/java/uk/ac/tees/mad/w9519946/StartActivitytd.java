@@ -12,7 +12,7 @@ import android.widget.Button;
 public class StartActivitytd extends AppCompatActivity {
 
     private Button dare;
-    private Button start_spin;
+    private Button start_spin12;
     private Button truth;
 
     @Override
@@ -21,18 +21,8 @@ public class StartActivitytd extends AppCompatActivity {
         Log.d("StartActivitytd", "onCreate");
         setContentView(R.layout.activity_start_td);
 
-        start_spin = findViewById(R.id.start_spin);
-        truth = findViewById(R.id.truth);
-        dare = findViewById(R.id.dare);
 
-
-
-        start_spin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), MainActivitytd.class));
-            }
-        });
+        truth = findViewById(R.id.truth1);
 
         truth.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,6 +30,17 @@ public class StartActivitytd extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(), TruthActivitytd.class));
             }
         });
+
+        start_spin12 = findViewById(R.id.start_12spin);
+
+        start_spin12.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), MainActivitytd.class));
+            }
+        });
+
+        dare = findViewById(R.id.dare1);
 
         dare.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -5,7 +5,8 @@ import java.util.List;
 import retrofit2.Call;
 import retrofit2.http.GET;
 
-public interface APICovidInterface {
+public interface
+APICovidInterface {
     String URL_BASE = "https://corona.lmao.ninja/v2/";
 
     @GET("countries")

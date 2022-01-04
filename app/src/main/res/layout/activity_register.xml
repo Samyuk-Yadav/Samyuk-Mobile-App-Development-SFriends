@@ -8,39 +8,39 @@
     tools:context=".RegisterActivity">
 
     <EditText
-        android:id="@+id/Email"
+        android:id="@+id/Email_r"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/imageView5"
+        android:layout_below="@+id/imageView5_r"
         android:layout_marginTop="45dp"
         android:hint="Email"
         android:minHeight="48dp"
         android:textColor="@color/Red" />
 
     <EditText
-        android:id="@+id/Password"
+        android:id="@+id/Password_r"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/Email"
+        android:layout_below="@+id/Email_r"
         android:layout_marginTop="44dp"
         android:hint="Password"
         android:minHeight="48dp"
         android:textColor="@color/Red" />
 
     <Button
-        android:id="@+id/register"
+        android:id="@+id/register_r"
         android:layout_width="134dp"
         android:layout_height="58dp"
-        android:layout_below="@+id/Password"
+        android:layout_below="@+id/Password_r"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="91dp"
         android:text="Register" />
 
     <TextView
-        android:id="@+id/clickMe"
+        android:id="@+id/clickMe_r"
         android:layout_width="310dp"
         android:layout_height="77dp"
-        android:layout_below="@+id/register"
+        android:layout_below="@+id/register_r"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="23dp"
         android:layout_marginEnd="80dp"
@@ -50,7 +50,7 @@
         android:textStyle="bold" />
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/imageView5_r"
         android:layout_width="match_parent"
         android:layout_height="157dp"
         app:srcCompat="@drawable/register_image" />

@@ -14,7 +14,7 @@ import android.widget.TextView;
 
 public class Tic_Tak_Toe extends AppCompatActivity {
 
-    ImageView back, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9;
+    ImageView back_button, btn_one, btn_two, btn_three, btn_four, btn_five, btn_six, btn_seven, btn_eight, btn_nine;
     private String gameStart = "O";
     int b1=5, b2=5, b3=5, b4=5, b5=5, b6=5, b7=5, b8=5, b9=5;
     int i=0, xCount=0, oCount=0;
@@ -28,16 +28,15 @@ public class Tic_Tak_Toe extends AppCompatActivity {
 
         Reset = findViewById(R.id.reset);
 
-        btn1 = findViewById(R.id.btnImage1);
-        btn2 = findViewById(R.id.btnImage2);
-        btn3 = findViewById(R.id.btnImage3);
-        btn4 = findViewById(R.id.btnImage4);
-        btn5 = findViewById(R.id.btnImage5);
-        btn6 = findViewById(R.id.btnImage6);
-        btn7 = findViewById(R.id.btnImage7);
-        btn8 = findViewById(R.id.btnImage8);
-        btn9 = findViewById(R.id.btnImage9);
-        back = findViewById(R.id.back);
+        btn_two = findViewById(R.id.btnImage2);
+        btn_three = findViewById(R.id.btnImage3);
+        btn_four = findViewById(R.id.btnImage4);
+        btn_five = findViewById(R.id.btnImage5);
+        btn_six = findViewById(R.id.btnImage6);
+        btn_seven = findViewById(R.id.btnImage7);
+        btn_eight = findViewById(R.id.btnImage8);
+        btn_nine = findViewById(R.id.btnImage9);
+        back_button = findViewById(R.id.back);
 
         Xscore = findViewById(R.id.AlphaX);
         Oscore = findViewById(R.id.BetaY);
@@ -48,21 +47,21 @@ public class Tic_Tak_Toe extends AppCompatActivity {
                 resetValues();
                 oCount=0;
                 xCount=0;
-                btn1.setImageDrawable(null);
-                btn2.setImageDrawable(null);
-                btn3.setImageDrawable(null);
-                btn4.setImageDrawable(null);
-                btn5.setImageDrawable(null);
-                btn6.setImageDrawable(null);
-                btn7.setImageDrawable(null);
-                btn8.setImageDrawable(null);
-                btn9.setImageDrawable(null);
+                btn_one.setImageDrawable(null);
+                btn_two.setImageDrawable(null);
+                btn_five.setImageDrawable(null);
+                btn_four.setImageDrawable(null);
+                btn_three.setImageDrawable(null);
+                btn_six.setImageDrawable(null);
+                btn_nine.setImageDrawable(null);
+                btn_eight.setImageDrawable(null);
+                btn_seven.setImageDrawable(null);
                 Xscore.setText("Score Alpha: ===> " + String.valueOf(xCount));
                 Oscore.setText("Score Beta: ===> " + String.valueOf(oCount));
             }
         });
 
-        back.setOnClickListener(new View.OnClickListener() {
+        back_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Tic_Tak_Toe.this, ScrollActivity.class));
@@ -70,18 +69,20 @@ public class Tic_Tak_Toe extends AppCompatActivity {
             }
         });
 
-        btn1.setOnClickListener(new View.OnClickListener() {
+        btn_one = findViewById(R.id.btnImage1);
+
+        btn_one.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (gameStart.equals("X"))
                 {
-                    btn1.setImageResource(R.drawable.cross);
+                    btn_one.setImageResource(R.drawable.cross);
                     b1 = 1;
                     i++;
                 }
                 else
                 {
-                    btn1.setImageResource(R.drawable.circle);
+                    btn_one.setImageResource(R.drawable.circle);
                     b1 = 0;
                     i++;
                 }
@@ -91,18 +92,18 @@ public class Tic_Tak_Toe extends AppCompatActivity {
             }
         });
 
-        btn2.setOnClickListener(new View.OnClickListener() {
+        btn_two.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (gameStart.equals("X"))
                 {
-                    btn2.setImageResource(R.drawable.cross);
+                    btn_two.setImageResource(R.drawable.cross);
                     b2 = 1;
                     i++;
                 }
                 else
                 {
-                    btn2.setImageResource(R.drawable.circle);
+                    btn_two.setImageResource(R.drawable.circle);
                     b2 = 0;
                     i++;
                 }
@@ -112,18 +113,18 @@ public class Tic_Tak_Toe extends AppCompatActivity {
             }
         });
 
-        btn3.setOnClickListener(new View.OnClickListener() {
+        btn_three.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (gameStart.equals("X"))
                 {
-                    btn3.setImageResource(R.drawable.cross);
+                    btn_three.setImageResource(R.drawable.cross);
                     b3 = 1;
                     i++;
                 }
                 else
                 {
-                    btn3.setImageResource(R.drawable.circle);
+                    btn_three.setImageResource(R.drawable.circle);
                     b3 = 0;
                     i++;
                 }
@@ -133,18 +134,18 @@ public class Tic_Tak_Toe extends AppCompatActivity {
             }
         });
 
-        btn4.setOnClickListener(new View.OnClickListener() {
+        btn_four.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (gameStart.equals("X"))
                 {
-                    btn4.setImageResource(R.drawable.cross);
+                    btn_four.setImageResource(R.drawable.cross);
                     b4 = 1;
                     i++;
                 }
                 else
                 {
-                    btn4.setImageResource(R.drawable.circle);
+                    btn_four.setImageResource(R.drawable.circle);
                     b4 = 0;
                     i++;
                 }
@@ -154,18 +155,18 @@ public class Tic_Tak_Toe extends AppCompatActivity {
             }
         });
 
-        btn5.setOnClickListener(new View.OnClickListener() {
+        btn_five.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (gameStart.equals("X"))
                 {
-                    btn5.setImageResource(R.drawable.cross);
+                    btn_five.setImageResource(R.drawable.cross);
                     b5 = 1;
                     i++;
                 }
                 else
                 {
-                    btn5.setImageResource(R.drawable.circle);
+                    btn_five.setImageResource(R.drawable.circle);
                     b5 = 0;
                     i++;
                 }
@@ -175,18 +176,18 @@ public class Tic_Tak_Toe extends AppCompatActivity {
             }
         });
 
-        btn6.setOnClickListener(new View.OnClickListener() {
+        btn_six.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (gameStart.equals("X"))
                 {
-                    btn6.setImageResource(R.drawable.cross);
+                    btn_six.setImageResource(R.drawable.cross);
                     b6 = 1;
                     i++;
                 }
                 else
                 {
-                    btn6.setImageResource(R.drawable.circle);
+                    btn_six.setImageResource(R.drawable.circle);
                     b6 = 0;
                     i++;
                 }
@@ -196,18 +197,18 @@ public class Tic_Tak_Toe extends AppCompatActivity {
             }
         });
 
-        btn7.setOnClickListener(new View.OnClickListener() {
+        btn_seven.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (gameStart.equals("X"))
                 {
-                    btn7.setImageResource(R.drawable.cross);
+                    btn_seven.setImageResource(R.drawable.cross);
                     b7 = 1;
                     i++;
                 }
                 else
                 {
-                    btn7.setImageResource(R.drawable.circle);
+                    btn_seven.setImageResource(R.drawable.circle);
                     b7 = 0;
                     i++;
                 }
@@ -217,18 +218,18 @@ public class Tic_Tak_Toe extends AppCompatActivity {
             }
         });
 
-        btn8.setOnClickListener(new View.OnClickListener() {
+        btn_eight.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (gameStart.equals("X"))
                 {
-                    btn8.setImageResource(R.drawable.cross);
+                    btn_eight.setImageResource(R.drawable.cross);
                     b8 = 1;
                     i++;
                 }
                 else
                 {
-                    btn8.setImageResource(R.drawable.circle);
+                    btn_eight.setImageResource(R.drawable.circle);
                     b8 = 0;
                     i++;
                 }
@@ -238,18 +239,18 @@ public class Tic_Tak_Toe extends AppCompatActivity {
             }
         });
 
-        btn9.setOnClickListener(new View.OnClickListener() {
+        btn_nine.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (gameStart.equals("X"))
                 {
-                    btn9.setImageResource(R.drawable.cross);
+                    btn_nine.setImageResource(R.drawable.cross);
                     b9 = 1;
                     i++;
                 }
                 else
                 {
-                    btn9.setImageResource(R.drawable.circle);
+                    btn_nine.setImageResource(R.drawable.circle);
                     b9 = 0;
                     i++;
                 }
@@ -270,15 +271,15 @@ public class Tic_Tak_Toe extends AppCompatActivity {
             builder.setMessage("Player Alpha Wins the game").setCancelable(false).setPositiveButton("Play Again!", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
-                    btn1.setImageDrawable(null);
-                    btn2.setImageDrawable(null);
-                    btn3.setImageDrawable(null);
-                    btn4.setImageDrawable(null);
-                    btn5.setImageDrawable(null);
-                    btn6.setImageDrawable(null);
-                    btn7.setImageDrawable(null);
-                    btn8.setImageDrawable(null);
-                    btn9.setImageDrawable(null);
+                    btn_one.setImageDrawable(null);
+                    btn_two.setImageDrawable(null);
+                    btn_three.setImageDrawable(null);
+                    btn_four.setImageDrawable(null);
+                    btn_five.setImageDrawable(null);
+                    btn_six.setImageDrawable(null);
+                    btn_seven.setImageDrawable(null);
+                    btn_eight.setImageDrawable(null);
+                    btn_nine.setImageDrawable(null);
                     resetValues();
                 }
             });
@@ -297,15 +298,15 @@ public class Tic_Tak_Toe extends AppCompatActivity {
             builder.setMessage("Player Alpha Wins the game").setCancelable(false).setPositiveButton("Play Again!", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
-                    btn1.setImageDrawable(null);
-                    btn2.setImageDrawable(null);
-                    btn3.setImageDrawable(null);
-                    btn4.setImageDrawable(null);
-                    btn5.setImageDrawable(null);
-                    btn6.setImageDrawable(null);
-                    btn7.setImageDrawable(null);
-                    btn8.setImageDrawable(null);
-                    btn9.setImageDrawable(null);
+                    btn_one.setImageDrawable(null);
+                    btn_two.setImageDrawable(null);
+                    btn_three.setImageDrawable(null);
+                    btn_four.setImageDrawable(null);
+                    btn_five.setImageDrawable(null);
+                    btn_six.setImageDrawable(null);
+                    btn_seven.setImageDrawable(null);
+                    btn_eight.setImageDrawable(null);
+                    btn_nine.setImageDrawable(null);
                     resetValues();
                 }
             });
@@ -321,15 +322,15 @@ public class Tic_Tak_Toe extends AppCompatActivity {
             builder.setMessage("Player Alpha Wins the game").setCancelable(false).setPositiveButton("Play Again!", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
-                    btn1.setImageDrawable(null);
-                    btn2.setImageDrawable(null);
-                    btn3.setImageDrawable(null);
-                    btn4.setImageDrawable(null);
-                    btn5.setImageDrawable(null);
-                    btn6.setImageDrawable(null);
-                    btn7.setImageDrawable(null);
-                    btn8.setImageDrawable(null);
-                    btn9.setImageDrawable(null);
+                    btn_one.setImageDrawable(null);
+                    btn_two.setImageDrawable(null);
+                    btn_three.setImageDrawable(null);
+                    btn_four.setImageDrawable(null);
+                    btn_five.setImageDrawable(null);
+                    btn_six.setImageDrawable(null);
+                    btn_seven.setImageDrawable(null);
+                    btn_eight.setImageDrawable(null);
+                    btn_nine.setImageDrawable(null);
                     resetValues();
                 }
             });
@@ -347,15 +348,15 @@ public class Tic_Tak_Toe extends AppCompatActivity {
             builder.setMessage("Player Alpha Wins the game").setCancelable(false).setPositiveButton("Play Again!", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
-                    btn1.setImageDrawable(null);
-                    btn2.setImageDrawable(null);
-                    btn3.setImageDrawable(null);
-                    btn4.setImageDrawable(null);
-                    btn5.setImageDrawable(null);
-                    btn6.setImageDrawable(null);
-                    btn7.setImageDrawable(null);
-                    btn8.setImageDrawable(null);
-                    btn9.setImageDrawable(null);
+                    btn_one.setImageDrawable(null);
+                    btn_two.setImageDrawable(null);
+                    btn_three.setImageDrawable(null);
+                    btn_four.setImageDrawable(null);
+                    btn_five.setImageDrawable(null);
+                    btn_six.setImageDrawable(null);
+                    btn_seven.setImageDrawable(null);
+                    btn_eight.setImageDrawable(null);
+                    btn_nine.setImageDrawable(null);
                     resetValues();
                 }
             });
@@ -372,15 +373,15 @@ public class Tic_Tak_Toe extends AppCompatActivity {
             builder.setMessage("Player Alpha Wins the game").setCancelable(false).setPositiveButton("Play Again!", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
-                    btn1.setImageDrawable(null);
-                    btn2.setImageDrawable(null);
-                    btn3.setImageDrawable(null);
-                    btn4.setImageDrawable(null);
-                    btn5.setImageDrawable(null);
-                    btn6.setImageDrawable(null);
-                    btn7.setImageDrawable(null);
-                    btn8.setImageDrawable(null);
-                    btn9.setImageDrawable(null);
+                    btn_one.setImageDrawable(null);
+                    btn_two.setImageDrawable(null);
+                    btn_three.setImageDrawable(null);
+                    btn_four.setImageDrawable(null);
+                    btn_five.setImageDrawable(null);
+                    btn_six.setImageDrawable(null);
+                    btn_seven.setImageDrawable(null);
+                    btn_eight.setImageDrawable(null);
+                    btn_nine.setImageDrawable(null);
                     resetValues();
                 }
             });
@@ -398,15 +399,15 @@ public class Tic_Tak_Toe extends AppCompatActivity {
             builder.setMessage("Player Alpha Wins the game").setCancelable(false).setPositiveButton("Play Again!", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
-                    btn1.setImageDrawable(null);
-                    btn2.setImageDrawable(null);
-                    btn3.setImageDrawable(null);
-                    btn4.setImageDrawable(null);
-                    btn5.setImageDrawable(null);
-                    btn6.setImageDrawable(null);
-                    btn7.setImageDrawable(null);
-                    btn8.setImageDrawable(null);
-                    btn9.setImageDrawable(null);
+                    btn_one.setImageDrawable(null);
+                    btn_two.setImageDrawable(null);
+                    btn_three.setImageDrawable(null);
+                    btn_four.setImageDrawable(null);
+                    btn_five.setImageDrawable(null);
+                    btn_six.setImageDrawable(null);
+                    btn_seven.setImageDrawable(null);
+                    btn_eight.setImageDrawable(null);
+                    btn_nine.setImageDrawable(null);
                     resetValues();
                 }
             });
@@ -424,15 +425,15 @@ public class Tic_Tak_Toe extends AppCompatActivity {
             builder.setMessage("Player Alpha Wins the game").setCancelable(false).setPositiveButton("Play Again!", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
-                    btn1.setImageDrawable(null);
-                    btn2.setImageDrawable(null);
-                    btn3.setImageDrawable(null);
-                    btn4.setImageDrawable(null);
-                    btn5.setImageDrawable(null);
-                    btn6.setImageDrawable(null);
-                    btn7.setImageDrawable(null);
-                    btn8.setImageDrawable(null);
-                    btn9.setImageDrawable(null);
+                    btn_one.setImageDrawable(null);
+                    btn_two.setImageDrawable(null);
+                    btn_three.setImageDrawable(null);
+                    btn_four.setImageDrawable(null);
+                    btn_five.setImageDrawable(null);
+                    btn_six.setImageDrawable(null);
+                    btn_seven.setImageDrawable(null);
+                    btn_eight.setImageDrawable(null);
+                    btn_nine.setImageDrawable(null);
                     resetValues();
                 }
             });
@@ -449,15 +450,15 @@ public class Tic_Tak_Toe extends AppCompatActivity {
             builder.setMessage("Player Alpha Wins the game").setCancelable(false).setPositiveButton("Play Again!", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
-                    btn1.setImageDrawable(null);
-                    btn2.setImageDrawable(null);
-                    btn3.setImageDrawable(null);
-                    btn4.setImageDrawable(null);
-                    btn5.setImageDrawable(null);
-                    btn6.setImageDrawable(null);
-                    btn7.setImageDrawable(null);
-                    btn8.setImageDrawable(null);
-                    btn9.setImageDrawable(null);
+                    btn_one.setImageDrawable(null);
+                    btn_two.setImageDrawable(null);
+                    btn_three.setImageDrawable(null);
+                    btn_four.setImageDrawable(null);
+                    btn_five.setImageDrawable(null);
+                    btn_six.setImageDrawable(null);
+                    btn_seven.setImageDrawable(null);
+                    btn_eight.setImageDrawable(null);
+                    btn_nine.setImageDrawable(null);
                     resetValues();
                 }
             });
@@ -476,15 +477,15 @@ public class Tic_Tak_Toe extends AppCompatActivity {
             builder.setMessage("Player Beta Wins the game").setCancelable(false).setPositiveButton("Play Again!", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
-                    btn1.setImageDrawable(null);
-                    btn2.setImageDrawable(null);
-                    btn3.setImageDrawable(null);
-                    btn4.setImageDrawable(null);
-                    btn5.setImageDrawable(null);
-                    btn6.setImageDrawable(null);
-                    btn7.setImageDrawable(null);
-                    btn8.setImageDrawable(null);
-                    btn9.setImageDrawable(null);
+                    btn_one.setImageDrawable(null);
+                    btn_two.setImageDrawable(null);
+                    btn_three.setImageDrawable(null);
+                    btn_four.setImageDrawable(null);
+                    btn_five.setImageDrawable(null);
+                    btn_six.setImageDrawable(null);
+                    btn_seven.setImageDrawable(null);
+                    btn_eight.setImageDrawable(null);
+                    btn_nine.setImageDrawable(null);
                     resetValues();
                 }
             });
@@ -501,15 +502,15 @@ public class Tic_Tak_Toe extends AppCompatActivity {
             builder.setMessage("Player Beta Wins the game").setCancelable(false).setPositiveButton("Play Again!", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
-                    btn1.setImageDrawable(null);
-                    btn2.setImageDrawable(null);
-                    btn3.setImageDrawable(null);
-                    btn4.setImageDrawable(null);
-                    btn5.setImageDrawable(null);
-                    btn6.setImageDrawable(null);
-                    btn7.setImageDrawable(null);
-                    btn8.setImageDrawable(null);
-                    btn9.setImageDrawable(null);
+                    btn_one.setImageDrawable(null);
+                    btn_two.setImageDrawable(null);
+                    btn_three.setImageDrawable(null);
+                    btn_four.setImageDrawable(null);
+                    btn_five.setImageDrawable(null);
+                    btn_six.setImageDrawable(null);
+                    btn_seven.setImageDrawable(null);
+                    btn_eight.setImageDrawable(null);
+                    btn_nine.setImageDrawable(null);
                     resetValues();
                 }
             });
@@ -526,15 +527,15 @@ public class Tic_Tak_Toe extends AppCompatActivity {
             builder.setMessage("Player Beta Wins the game").setCancelable(false).setPositiveButton("Play Again!", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
-                    btn1.setImageDrawable(null);
-                    btn2.setImageDrawable(null);
-                    btn3.setImageDrawable(null);
-                    btn4.setImageDrawable(null);
-                    btn5.setImageDrawable(null);
-                    btn6.setImageDrawable(null);
-                    btn7.setImageDrawable(null);
-                    btn8.setImageDrawable(null);
-                    btn9.setImageDrawable(null);
+                    btn_one.setImageDrawable(null);
+                    btn_two.setImageDrawable(null);
+                    btn_three.setImageDrawable(null);
+                    btn_four.setImageDrawable(null);
+                    btn_five.setImageDrawable(null);
+                    btn_six.setImageDrawable(null);
+                    btn_seven.setImageDrawable(null);
+                    btn_eight.setImageDrawable(null);
+                    btn_nine.setImageDrawable(null);
                     resetValues();
                 }
             });
@@ -553,15 +554,15 @@ public class Tic_Tak_Toe extends AppCompatActivity {
             builder.setMessage("Player Beta Wins the game").setCancelable(false).setPositiveButton("Play Again!", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
-                    btn1.setImageDrawable(null);
-                    btn2.setImageDrawable(null);
-                    btn3.setImageDrawable(null);
-                    btn4.setImageDrawable(null);
-                    btn5.setImageDrawable(null);
-                    btn6.setImageDrawable(null);
-                    btn7.setImageDrawable(null);
-                    btn8.setImageDrawable(null);
-                    btn9.setImageDrawable(null);
+                    btn_one.setImageDrawable(null);
+                    btn_two.setImageDrawable(null);
+                    btn_three.setImageDrawable(null);
+                    btn_four.setImageDrawable(null);
+                    btn_five.setImageDrawable(null);
+                    btn_six.setImageDrawable(null);
+                    btn_seven.setImageDrawable(null);
+                    btn_eight.setImageDrawable(null);
+                    btn_nine.setImageDrawable(null);
                     resetValues();
                 }
             });
@@ -578,15 +579,15 @@ public class Tic_Tak_Toe extends AppCompatActivity {
             builder.setMessage("Player Beta Wins the game").setCancelable(false).setPositiveButton("Play Again!", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
-                    btn1.setImageDrawable(null);
-                    btn2.setImageDrawable(null);
-                    btn3.setImageDrawable(null);
-                    btn4.setImageDrawable(null);
-                    btn5.setImageDrawable(null);
-                    btn6.setImageDrawable(null);
-                    btn7.setImageDrawable(null);
-                    btn8.setImageDrawable(null);
-                    btn9.setImageDrawable(null);
+                    btn_one.setImageDrawable(null);
+                    btn_two.setImageDrawable(null);
+                    btn_three.setImageDrawable(null);
+                    btn_four.setImageDrawable(null);
+                    btn_five.setImageDrawable(null);
+                    btn_six.setImageDrawable(null);
+                    btn_seven.setImageDrawable(null);
+                    btn_eight.setImageDrawable(null);
+                    btn_nine.setImageDrawable(null);
                     resetValues();
                 }
             });
@@ -604,15 +605,15 @@ public class Tic_Tak_Toe extends AppCompatActivity {
             builder.setMessage("Player Beta Wins the game").setCancelable(false).setPositiveButton("Play Again!", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
-                    btn1.setImageDrawable(null);
-                    btn2.setImageDrawable(null);
-                    btn3.setImageDrawable(null);
-                    btn4.setImageDrawable(null);
-                    btn5.setImageDrawable(null);
-                    btn6.setImageDrawable(null);
-                    btn7.setImageDrawable(null);
-                    btn8.setImageDrawable(null);
-                    btn9.setImageDrawable(null);
+                    btn_one.setImageDrawable(null);
+                    btn_two.setImageDrawable(null);
+                    btn_three.setImageDrawable(null);
+                    btn_four.setImageDrawable(null);
+                    btn_five.setImageDrawable(null);
+                    btn_six.setImageDrawable(null);
+                    btn_seven.setImageDrawable(null);
+                    btn_eight.setImageDrawable(null);
+                    btn_nine.setImageDrawable(null);
                     resetValues();
                 }
             });
@@ -629,15 +630,15 @@ public class Tic_Tak_Toe extends AppCompatActivity {
             builder.setMessage("Player Beta Wins the game").setCancelable(false).setPositiveButton("Play Again!", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
-                    btn1.setImageDrawable(null);
-                    btn2.setImageDrawable(null);
-                    btn3.setImageDrawable(null);
-                    btn4.setImageDrawable(null);
-                    btn5.setImageDrawable(null);
-                    btn6.setImageDrawable(null);
-                    btn7.setImageDrawable(null);
-                    btn8.setImageDrawable(null);
-                    btn9.setImageDrawable(null);
+                    btn_one.setImageDrawable(null);
+                    btn_two.setImageDrawable(null);
+                    btn_three.setImageDrawable(null);
+                    btn_four.setImageDrawable(null);
+                    btn_five.setImageDrawable(null);
+                    btn_six.setImageDrawable(null);
+                    btn_seven.setImageDrawable(null);
+                    btn_eight.setImageDrawable(null);
+                    btn_nine.setImageDrawable(null);
                     resetValues();
                 }
             });
@@ -654,15 +655,15 @@ public class Tic_Tak_Toe extends AppCompatActivity {
             builder.setMessage("Player Beta Wins the game").setCancelable(false).setPositiveButton("Play Again!", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
-                    btn1.setImageDrawable(null);
-                    btn2.setImageDrawable(null);
-                    btn3.setImageDrawable(null);
-                    btn4.setImageDrawable(null);
-                    btn5.setImageDrawable(null);
-                    btn6.setImageDrawable(null);
-                    btn7.setImageDrawable(null);
-                    btn8.setImageDrawable(null);
-                    btn9.setImageDrawable(null);
+                    btn_one.setImageDrawable(null);
+                    btn_two.setImageDrawable(null);
+                    btn_three.setImageDrawable(null);
+                    btn_four.setImageDrawable(null);
+                    btn_five.setImageDrawable(null);
+                    btn_six.setImageDrawable(null);
+                    btn_seven.setImageDrawable(null);
+                    btn_eight.setImageDrawable(null);
+                    btn_nine.setImageDrawable(null);
                     resetValues();
                 }
             });
@@ -680,15 +681,15 @@ public class Tic_Tak_Toe extends AppCompatActivity {
                 builder.setMessage("No Player Wins the game").setCancelable(false).setPositiveButton("Play Again!", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        btn1.setImageDrawable(null);
-                        btn2.setImageDrawable(null);
-                        btn3.setImageDrawable(null);
-                        btn4.setImageDrawable(null);
-                        btn5.setImageDrawable(null);
-                        btn6.setImageDrawable(null);
-                        btn7.setImageDrawable(null);
-                        btn8.setImageDrawable(null);
-                        btn9.setImageDrawable(null);
+                        btn_one.setImageDrawable(null);
+                        btn_two.setImageDrawable(null);
+                        btn_three.setImageDrawable(null);
+                        btn_four.setImageDrawable(null);
+                        btn_five.setImageDrawable(null);
+                        btn_six.setImageDrawable(null);
+                        btn_seven.setImageDrawable(null);
+                        btn_eight.setImageDrawable(null);
+                        btn_nine.setImageDrawable(null);
                         resetValues();
                     }
                 });

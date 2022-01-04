@@ -10,20 +10,19 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
-import android.widget.Switch;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 
 public class ScrollActivity extends AppCompatActivity {
-    private Button logout;
-    private Button tictaktoe;
-    private Button truthanddare;
-    private Button notepad;
-    private Button maps;
-    private Button covid;
-    SwitchCompat switchCompat;
+    private Button logout_button;
+    SwitchCompat switchCompat_button;
+    private Button tictaktoe_button;
+    private Button truthanddare_button;
     SharedPreferences sharedPreferences = null;
+    private Button notepad_button;
+    private Button maps_button;
+    private Button covid_button;
 
 
     @Override
@@ -31,12 +30,6 @@ public class ScrollActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scroll);
 
-        tictaktoe= findViewById(R.id.btngames);
-        notepad = findViewById(R.id.notes);
-        maps = findViewById(R.id.maps);
-        truthanddare = findViewById(R.id.truth_and_dare);
-        covid = findViewById(R.id.covid);
-        switchCompat = findViewById(R.id.switchCompat);
 
 
         sharedPreferences = getSharedPreferences("Night" , 0);
@@ -44,21 +37,23 @@ public class ScrollActivity extends AppCompatActivity {
 
         if(booleanValue){
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-            switchCompat.setChecked(true);
+            switchCompat_button.setChecked(true);
         }
 
-        switchCompat.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        switchCompat_button = findViewById(R.id.switchCompat);
+
+        switchCompat_button.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked){
                     AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-                    switchCompat.setChecked(true);
+                    switchCompat_button.setChecked(true);
                     SharedPreferences.Editor editor = sharedPreferences.edit();
                     editor.putBoolean("Night_Mode", true);
                     editor.commit();
                 }else{
                     AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-                    switchCompat.setChecked(false);
+                    switchCompat_button.setChecked(false);
                     SharedPreferences.Editor editor = sharedPreferences.edit();
                     editor.putBoolean("Night_Mode", false);
                     editor.commit();
@@ -66,27 +61,25 @@ public class ScrollActivity extends AppCompatActivity {
             }
         });
 
+        logout_button = findViewById(R.id.logout);
 
-
-
-
-        logout = findViewById(R.id.logout);
-
-        logout.setOnClickListener((v) -> {
+        logout_button.setOnClickListener((v) -> {
             FirebaseAuth.getInstance().signOut();
             Toast.makeText(this, "Logged Out", Toast.LENGTH_SHORT).show();
             startActivity(new Intent(this, Start_Activity.class));
         });
+        tictaktoe_button = findViewById(R.id.btngames);
 
-        tictaktoe.setOnClickListener(new View.OnClickListener() {
+        tictaktoe_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(ScrollActivity.this, Tic_Tak_Toe.class));
 
             }
         });
+        truthanddare_button = findViewById(R.id.truth_and_dare);
 
-        truthanddare.setOnClickListener(new View.OnClickListener() {
+        truthanddare_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), StartActivitytd.class));
@@ -94,22 +87,26 @@ public class ScrollActivity extends AppCompatActivity {
             }
         });
 
-        notepad.setOnClickListener(new View.OnClickListener() {
+        notepad_button = findViewById(R.id.notes);
+
+        notepad_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(ScrollActivity.this, Notepad.class));
 
             }
         });
+        maps_button = findViewById(R.id.maps);
 
-        maps.setOnClickListener(new View.OnClickListener() {
+        maps_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(ScrollActivity.this, MainActivityGM.class));
             }
         });
+        covid_button = findViewById(R.id.covid);
 
-        covid.setOnClickListener(new View.OnClickListener() {
+        covid_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(ScrollActivity.this, MainActivityCovid.class ));

@@ -28,8 +28,8 @@ import java.util.Locale;
 public class MainActivity_Complete_location extends AppCompatActivity {
 
     Button locationMe;
-    TextView latitudeCurrent, textView5,longitudeCurrent, textView7, textView8;
-    FusedLocationProviderClient fusedLocationProvider;
+    TextView latitude4Current, text5View5,longitude6Current, text7View7, text8View8;
+    FusedLocationProviderClient fusedLocationProvider12;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,15 +37,15 @@ public class MainActivity_Complete_location extends AppCompatActivity {
         setContentView(R.layout.activity_main_complete_location);
 
         locationMe = findViewById(R.id.Get_my_complete_location);
-        latitudeCurrent = findViewById(R.id.textView4);
-        textView5 = findViewById(R.id.textView5);
-        longitudeCurrent = findViewById(R.id.textView6);
-        textView7 = findViewById(R.id.textView7);
-        textView8 = findViewById(R.id.textView8);
+        latitude4Current = findViewById(R.id.text4View4);
+        text5View5 = findViewById(R.id.text5View5);
+        text8View8 = findViewById(R.id.text8View8);
+        longitude6Current = findViewById(R.id.text6View6);
+        text7View7 = findViewById(R.id.text7View7);
 
 
 
-        fusedLocationProvider = LocationServices.getFusedLocationProviderClient(this);
+        fusedLocationProvider12 = LocationServices.getFusedLocationProviderClient(this);
 
         locationMe.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -70,7 +70,7 @@ public class MainActivity_Complete_location extends AppCompatActivity {
             // for ActivityCompat#requestPermissions for more details.
             return;
         }
-        fusedLocationProvider.getLastLocation().addOnCompleteListener(new OnCompleteListener<Location>() {
+        fusedLocationProvider12.getLastLocation().addOnCompleteListener(new OnCompleteListener<Location>() {
             @Override
             public void onComplete(@NonNull Task<Location> task) {
                 Location location = task.getResult();
@@ -80,13 +80,13 @@ public class MainActivity_Complete_location extends AppCompatActivity {
                         List<Address> addresses = geo.getFromLocation(
                                 location.getLatitude(), location.getLongitude(), 1
                         );
-                        latitudeCurrent.setText(HtmlCompat.fromHtml(
+                        latitude4Current.setText(HtmlCompat.fromHtml(
                                 "<font color = #6200EE><b>Latitude: </b><br><?font>" +addresses.get(0).getLatitude(), HtmlCompat.FROM_HTML_MODE_LEGACY
                         ));
-                        longitudeCurrent.setText(HtmlCompat.fromHtml("<font color = '#6200EE'><b>Longitude: </b><br></font>"+addresses.get(0).getLongitude(), HtmlCompat.FROM_HTML_MODE_LEGACY));
-                        textView5.setText(HtmlCompat.fromHtml("<font color = '#6200EE'><b>Country Name: </b><br></font>"+addresses.get(0).getCountryName(), HtmlCompat.FROM_HTML_MODE_LEGACY));
-                        textView7.setText(HtmlCompat.fromHtml("<font color = '#6200EE'><b>Locality: </b><br></font>"+addresses.get(0).getLocality(), HtmlCompat.FROM_HTML_MODE_LEGACY));
-                        textView8.setText(HtmlCompat.fromHtml("<font color = '#6200EE'><b>Address Line: </b><br></font>"+addresses.get(0).getAddressLine(0),HtmlCompat.FROM_HTML_MODE_LEGACY));
+                        longitude6Current.setText(HtmlCompat.fromHtml("<font color = '#6200EE'><b>Longitude: </b><br></font>"+addresses.get(0).getLongitude(), HtmlCompat.FROM_HTML_MODE_LEGACY));
+                        text5View5.setText(HtmlCompat.fromHtml("<font color = '#6200EE'><b>Country Name: </b><br></font>"+addresses.get(0).getCountryName(), HtmlCompat.FROM_HTML_MODE_LEGACY));
+                        text7View7.setText(HtmlCompat.fromHtml("<font color = '#6200EE'><b>Locality: </b><br></font>"+addresses.get(0).getLocality(), HtmlCompat.FROM_HTML_MODE_LEGACY));
+                        text8View8.setText(HtmlCompat.fromHtml("<font color = '#6200EE'><b>Address Line: </b><br></font>"+addresses.get(0).getAddressLine(0),HtmlCompat.FROM_HTML_MODE_LEGACY));
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
